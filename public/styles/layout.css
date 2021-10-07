@@ -15,11 +15,20 @@ html {
  */
 
 body {
+ 
+  justify-content: center;
   color: #545149;
   background-color: #f4f1ec;
+  font-family: 'Bungee', cursive;
   font-size: 24px;
+  
 }
-
+body main{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  background-color: #f4f1ec;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

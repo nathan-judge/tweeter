@@ -1,0 +1,154 @@
+.tweet-zone{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.container{
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+   
+}
+
+
+.new-tweet div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+  
+}
+.new-tweet label{
+    font-size: medium;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.new-tweet textarea{
+    outline: none;
+    font-size: medium;
+    width: 570px;
+    height: 24px;
+    background-color: #f4f1ec;
+    border: none;
+    color: #545149;
+    border-bottom: 2px solid #545149;
+}
+form button{
+    height: 30px;
+    width: 80px;
+    border-radius: 4px;
+    font-size: medium;
+    background-color: #4056A1;
+    color: white;
+    border: none;
+    
+}
+form button:hover{
+    background-color: white;
+    color: #4056A1;
+}
+.neg{
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+}
+.tweet-post-container{
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    padding: 1em;
+}
+
+.tweet-published{
+    display: flex;
+    flex-direction: column;
+    width:592px;
+    border: 3px solid;  
+    padding: 0.5em;
+    margin-top: 1em;
+
+}
+.tweet-published:hover{
+    border: 3px solid;
+    box-shadow: 5px 10px #888888;
+}
+
+
+.nav-tweet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+    width: 100%;
+    padding-top:0.5em;
+    padding-bottom: 1.5em;
+}
+
+.name {
+    color: inherit;
+    font-size: large;
+}
+.handle{
+    font-size: large;
+    color: #c2c5cf;
+}
+.tweet-text{
+    display: flex;
+    align-content: center ;
+    border-bottom: solid black;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: smaller;
+}
+.bottom-tweet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+    width: 100%;
+    padding-top:1em;
+    padding-bottom: 0.5em;
+}
+
+.days{
+    font-size: small;
+    color: inherit;
+}
+.icons i{
+    font-size: small;
+    color: #4056A1;
+}
+
+.icons button {
+    outline: none;
+    border: none;
+  }
+  .icons i:hover{
+    color: orange;
+}
+.nav-tweet i{
+    padding-right: 0.5em;
+}
+ .profile-img{
+    width: 20px;
+    height: 22px;
+}
+
+#error-message{
+    font-family: 'Rajdhani', sans-serif;
+    color: red;
+    font-size: 20px;
+    margin: 1px;
+    font-weight: bold;
+    text-align: center;
+}

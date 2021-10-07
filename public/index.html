@@ -1,29 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6293710e3d.js" crossorigin="anonymous"></script>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <div class="navCon">
+    <nav class="navbar">
       <span>tweeter</span>
+      <span>write a tweet</span>
     </nav>
+  </div>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+  <header>
+    <div class="profile-pic">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div class="profile-name">
+      <h2>Your Name</h2>
+    </div>
+  </header>
+  <!-- Page-specific (main) content here -->
+  <div class="tweet-zone">
+    <main class="container">
+
+      <section class="new-tweet">
+        <p id="error-message"></p>
+        <form id="text-input" method="POST" action="/tweets/">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+
+
+  <ul class="tweet-post-container">
+    <li class="tweet-published">
+
+      <nav class="nav-tweet">
+
+        <span class="name"><i class="fas fa-user-alt"></i> Newton</span>
+        <span class="handle">@Newton</span>
+      </nav>
+
+      <div class="tweet-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor vero in voluptate
+        tempora ea doloremque, corrupti necessitatibus c111</div>
+      <nav class="bottom-tweet">
+        <div class="days">10 days ago</div>
+
+        <div class="icons">
+          <button class="flag">
+            <i class="fas fa-flag"></i>
+          </button>
+
+          <button class="share">
+            <i class="fas fa-retweet"></i>
+          </button>
+
+          <button class="like">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </nav>
+    </li>
+  </ul>
+
+
+  <script src="scripts/composer-char-counter.js"></script>
+
+</body>
+
 </html>
