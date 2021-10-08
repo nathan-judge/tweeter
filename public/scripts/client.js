@@ -45,13 +45,21 @@ $(document).ready(function () {
             return
         }
 
-        console.log("event,,,", formData)
         $.post("http://localhost:8080/tweets/", { text: formData }, function (data, status) {
-            console.log("reult...", data)
+            $('#tweet-text').val('');
             $.get("http://localhost:8080/tweets/", function (data, status) {
-                renderTweets(data)
+
+                let popData = [data.pop()]
+                console.log(popData)
+                renderTweets(popData)
             })
         });
+
+    });
+    $("#write-tweet").on("click", function () {
+        let $form = $('.new-tweet')
+        $form.addClass('rmv')
+        console.log($form)
 
     });
 
@@ -63,7 +71,7 @@ $(document).ready(function () {
         tweets.forEach(tweet => {
             const givenTweet = createTweetElement(tweet)
 
-            $(".tweet-post-container").append(givenTweet);
+            $(".tweet-post-container").prepend(givenTweet);
         });
 
     }
