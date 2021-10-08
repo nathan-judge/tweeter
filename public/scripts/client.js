@@ -47,6 +47,7 @@ $(document).ready(function () {
 
         $.post("http://localhost:8080/tweets/", { text: formData }, function (data, status) {
             $('#tweet-text').val('');
+            $('#counter').val(140);
             $.get("http://localhost:8080/tweets/", function (data, status) {
 
                 let popData = [data.pop()]

@@ -33,5 +33,11 @@ nav span{
     background-color: #7ec7cc;
     background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
     }
-
+#write-tweet{
+    outline: none;
+    border: none;
+    padding-right: 1.5em;
+    background-color: #7ec7cc;
+    color: white;
+}
 }
